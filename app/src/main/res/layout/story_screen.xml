@@ -9,7 +9,7 @@
     android:backgroundTintMode="add">
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/iv_bibliothek"
         android:layout_width="536dp"
         android:layout_height="797dp"
         android:scaleType="centerInside"
@@ -17,4 +17,53 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/bibliothek" />
+
+    <ImageView
+        android:id="@+id/iv_buch"
+        android:layout_width="188dp"
+        android:layout_height="280dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iv_bibliothek"
+        app:srcCompat="@drawable/buch" />
+
+    <ImageView
+        android:id="@+id/iv_weiter"
+        android:layout_width="104dp"
+        android:layout_height="99dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/weiterorback" />
+
+    <TextView
+        android:id="@+id/tv_story"
+        android:layout_width="522dp"
+        android:layout_height="581dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textColor="@color/text"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_weiter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textColor="@color/text"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/iv_weiter"
+        app:layout_constraintEnd_toEndOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
