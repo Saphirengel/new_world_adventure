@@ -5,9 +5,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
+import com.example.newworldadventure.R
 import com.example.newworldadventure.databinding.IntroScreenBinding
 
-/**
+/** Ist das Fragment zum Intro_Screen
  *@param [binding] ist ein binding an den IntroScreen
  * ein viewModel wird bei der einfachheit den Layouts nicht benötigt
  */
@@ -29,5 +31,9 @@ class IntroFragment: Fragment() {
         binding.tvTiteleins.text = "World"
         binding.tvTitelzwei.text = "Adventure"
         binding.tvGamestart.text = "Let's Play"
+
+        binding.tvGamestart.setOnClickListener {
+            findNavController().navigate(R.id.storyFragment)
+        }
     }
 }

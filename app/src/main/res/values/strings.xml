@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">New World Adventure</string>
+
+
+    <string name="titel">Krieg bleibt Krieg</string>
+    <string name="story">"In ferner Vergangenheit, als der alte König zur Ruhe gebettet wurde, hinterließ er nichts als Asche und Tod.
+        Seine Erben, getrieben von Gier und Machtgier, stürzten sich in blutige Kriege, die das Land ins Elend stürzten.
+        Gleichzeitig wuchsen unkontrollierbare Monsterhorden, da sich niemand mehr um sie kümmerte.
+        In einer Welt, in der Krieg und Chaos regieren, liegt es nun an dir, die Bruchstücke dieses einst stolzen Königreichs wieder zusammenzuführen
+        und die heranrückende Dunkelheit zu besiegen.
+        Bist du der Held, den das Land so dringend benötigt?"</string>
+    <string name="starttext">Selbst seit deiner frühesten Kindheit, war deine Existenz auf die tristen Wände deiner Zelle beschränkt.
+        Der Grund für deine Gefangenschaft bleibt ein düsteres Rätsel. Doch heute ist alles anders.
+        In der stickigen Luft liegt ein beißender Brandgeruch. Plötzlich öffnet sich die Zellentür, noch bevor du begreifen kannst,was vor sich geht.
+        Eine Wache bricht, nachdem sie deine Zelle aufgeschlossen hat, vor deiner Schwelle zusammen.
+        In diesem Moment beginnt deine Odyssee.
+        Bist du bereit, die Geheimnisse deiner Vergangenheit zu entschlüsseln und deiner Zukunft entgegenzutreten?</string>
 </resources>

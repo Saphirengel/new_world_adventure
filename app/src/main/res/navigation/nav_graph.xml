@@ -8,4 +8,8 @@
         android:id="@+id/introFragment"
         android:name="com.example.newworldadventure.ui.IntroFragment"
         android:label="IntroFragment" />
+    <fragment
+        android:id="@+id/storyFragment"
+        android:name="com.example.newworldadventure.ui.StoryFragment"
+        android:label="StoryFragment" />
 </navigation>
