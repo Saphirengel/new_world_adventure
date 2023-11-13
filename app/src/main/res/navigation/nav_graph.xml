@@ -12,4 +12,8 @@
         android:id="@+id/storyFragment"
         android:name="com.example.newworldadventure.ui.StoryFragment"
         android:label="StoryFragment" />
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="com.example.newworldadventure.ui.StartFragment"
+        android:label="StartFragment" />
 </navigation>
