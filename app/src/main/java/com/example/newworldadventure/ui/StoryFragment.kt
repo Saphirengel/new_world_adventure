@@ -33,10 +33,13 @@ class StoryFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         val book = false
 
-
+        /**hier werden die bindings Aufgerufen. Sowie es deklariert wird das man das Buch anklicken muss
+         * damit man weiter kommt, das heit wenn man das Buch anklickt wird die Story geladen und danach
+         * der ivweiter aktivierbar. Der delay sorgt dafür das der Text in schreibschrift und nach einander
+         * ausgegeben wird
+         */
         binding.tvClickmich.text = "Klick mich"
         binding.ivWeiter.rotation = 180f
-        binding.ivWeiter.isEnabled = false
         binding.ivBuch.setOnClickListener {
             if (!book) {
                 val titelText = getString(R.string.titel)
@@ -46,11 +49,11 @@ class StoryFragment : Fragment() {
 
                 val delay = 100 // Zeit zwischen den Texten
 
-                showTextWithDelay(binding.tvStorytitel, titelText, delay) {
-                    showTextWithDelay(binding.tvStory, storyText, delay) {
-                        showTextWithDelay(binding.tvStarttext, startText, delay) {
-                            showTextWithDelay(binding.tvWeiter, weiterGehts, delay){
-
+                showTextWithDelay(binding.tvStorytitel, titelText, delay, true) {
+                    showTextWithDelay(binding.tvStory, storyText, delay, true) {
+                        showTextWithDelay(binding.tvStarttext, startText, delay, true) {
+                            showTextWithDelay(binding.tvWeiter, weiterGehts, delay, false) {
+                                binding.ivWeiter.isEnabled = true
                             }
                         }
                     }
@@ -59,8 +62,10 @@ class StoryFragment : Fragment() {
 
             }
         }
-        binding.ivWeiter.setOnClickListener{
-            findNavController().navigate(R.id.startFragment)
+        binding.ivWeiter.setOnClickListener {
+            if (binding.ivWeiter.isEnabled) {
+                findNavController().navigate(R.id.startFragment)
+            }
         }
     }
 
@@ -72,16 +77,19 @@ class StoryFragment : Fragment() {
         textView: TextView,
         text: String,
         delay: Int,
+        enableButton: Boolean,
         callback: () -> Unit
     ) {
         val charArray = text.toCharArray()
         val stringBuilder = StringBuilder()
+        var weiterButton = binding.ivWeiter
+        weiterButton.isEnabled = false
         textView.text = ""
 
         showNextChar(0, charArray, stringBuilder, textView, delay) {
             if (charArray.size == charArray.indices.last) {
                 // Hier wird geprüft, ob der Text vollständig angezeigt wurde
-                binding.ivWeiter.isEnabled = true
+                weiterButton.isEnabled = enableButton
             }
             callback()
         }
@@ -107,4 +115,3 @@ class StoryFragment : Fragment() {
         }
     }
 }
-

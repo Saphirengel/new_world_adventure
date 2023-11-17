@@ -22,5 +22,23 @@ class StartFragment: Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        binding.btStartgame.text = "Start Game"
+        binding.btLaden.text = "Spielstand Laden"
+        binding.btCharerstellen.text = "Char Erstellen"
+        binding.btOption.text = "Option"
+        binding.btKompendium.text = "Kompendium"
+        binding.btBeenden.text = "Beenden"
+
+        binding.btLaden.setOnClickListener {
+            //if(Liste der Spielstände leer)
+            binding.btLaden.isEnabled = false
+            //else{binding.btLaden.isEnabled = true}
+        }
+        binding.btStartgame.setOnClickListener {
+            //if(Liste an Chars leer)
+            binding.btStartgame.isEnabled = false
+            //else(binding.btStartgame.isEnable = true
+        }
     }
 }
