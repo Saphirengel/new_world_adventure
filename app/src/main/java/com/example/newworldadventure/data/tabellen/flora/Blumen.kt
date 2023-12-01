@@ -1,4 +1,4 @@
-package com.example.newworldadventure.data.tabellen.Flora
+package com.example.newworldadventure.data.tabellen.flora
 
 import com.example.newworldadventure.data.model.Flora
 

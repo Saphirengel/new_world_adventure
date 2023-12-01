@@ -1,4 +1,4 @@
-package com.example.newworldadventure.data.tabellen.Rohstoffe
+package com.example.newworldadventure.data.tabellen.rohstoffe
 
 import com.example.newworldadventure.data.model.Rohstoffe
 
