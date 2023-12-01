@@ -13,5 +13,6 @@ data class Material(
     val rohstoff1: Rohstoffe,
     val rohstoff2: Rohstoffe,
     val rohstoff3: Rohstoffe,
+    val giftig: Boolean,
     val materialGewicht: Double
 )

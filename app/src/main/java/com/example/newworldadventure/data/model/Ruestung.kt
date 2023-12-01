@@ -3,7 +3,7 @@ package com.example.newworldadventure.data.model
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-@Entity(tableName = "ruestung-table")
+@Entity(tableName = "ruestung_table")
 data class Ruestung(
 
     @PrimaryKey(autoGenerate = true)

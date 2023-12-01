@@ -4,9 +4,11 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import com.example.newworldadventure.data.daos.RohstoffDao
 import com.example.newworldadventure.data.model.Elementarten
 import com.example.newworldadventure.data.model.Fauna
 import com.example.newworldadventure.data.model.Flora
+import com.example.newworldadventure.data.model.Fraktion
 import com.example.newworldadventure.data.model.Material
 import com.example.newworldadventure.data.model.Rassen
 import com.example.newworldadventure.data.model.Rohstoffe
@@ -26,10 +28,11 @@ import com.example.newworldadventure.data.model.Werte
     Ruestung::class,
     Schmuck::class,
     Waffen::class,
-    Werte::class],
+    Werte::class,
+    Fraktion::class],
     version = 1)
 abstract class GameDatabase: RoomDatabase(){
-    abstract val gameDatabaseDao: GameDatabaseDao
+    abstract val rohstoffDao: RohstoffDao
 }
 
     private lateinit var INSTANCE: GameDatabase
