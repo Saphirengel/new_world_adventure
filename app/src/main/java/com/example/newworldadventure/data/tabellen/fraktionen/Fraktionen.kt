@@ -1,4 +1,4 @@
-package com.example.newworldadventure.data.tabellen.Fraktionen
+package com.example.newworldadventure.data.tabellen.fraktionen
 
 import com.example.newworldadventure.data.model.Fraktion
 

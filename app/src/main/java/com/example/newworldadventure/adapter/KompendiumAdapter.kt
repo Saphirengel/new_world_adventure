@@ -1,22 +1,25 @@
 package com.example.newworldadventure.adapter
 
 import android.content.Context
+import android.service.autofill.Dataset
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.example.newworldadventure.R
+import com.example.newworldadventure.data.model.Flora
 import com.example.newworldadventure.databinding.KompendiumScreenFloraFaunaBinding
 import com.example.newworldadventure.databinding.KompendiumScreenMaterialienBinding
 import com.example.newworldadventure.databinding.KompendiumScreenWaffenRuestungSchmuckBinding
+import com.example.newworldadventure.ui.viewmodel.GameViewModel
 
 class KompendiumAdapter(
-    private val dataset: ,
-    private val context: Context
-) : RecyclerView.Adapter<ViewHolder(){
+    private val dataset: List<Any>,
+    val viewModel: GameViewModel
+) : RecyclerView.Adapter<ViewHolder>(){
 
     private  val floraUndFauna = 1
-    private val material = 2
+    private val materiale = 2
     private val armor = 3
 
 
@@ -30,18 +33,21 @@ class KompendiumAdapter(
 
         return when(item ){
             1 -> {floraUndFauna}
-            2 -> {material}
+            2 -> {materiale}
             else -> {armor}
         }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        return if(viewType ==){
+        return if(viewType == floraUndFauna){
             val binding = KompendiumScreenFloraFaunaBinding.inflate(LayoutInflater.from(parent.context),parent,false)
-        } else if (viewType ==){
+            floraUndFaunaViewHolder(binding)
+        } else if (viewType == materiale){
             val binding = KompendiumScreenMaterialienBinding.inflate(LayoutInflater.from(parent.context),parent,false)
+            materialViewHolder(binding)
         }else {
             val binding = KompendiumScreenWaffenRuestungSchmuckBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+            armorViewHolder(binding)
         }
     }
 
@@ -51,6 +57,8 @@ class KompendiumAdapter(
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = dataset[position]
+        val blume = viewModel.flora.value
+
 
         if(holder is floraUndFaunaViewHolder){
             holder.binding.ivFloraFauna.setImageResource()
