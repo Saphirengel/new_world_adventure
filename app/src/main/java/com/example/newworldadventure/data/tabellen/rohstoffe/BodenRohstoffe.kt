@@ -11,7 +11,7 @@ object BodenRohstoffe {
         Rohstoffe(3,"Kohle", "", 1.6),
         Rohstoffe(4,"Eisenerz", "", 1.0),
         Rohstoffe(5,"Kobalterzerz", "", 1.5),
-        Rohstoffe(6,"Kupfererz", "", 0.8),
+        Rohstoffe(6,"Sternenerz", "", 0.8),
         Rohstoffe(7,"Titanerz", "",2.0)
     )
 }

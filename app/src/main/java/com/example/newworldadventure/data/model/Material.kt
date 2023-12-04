@@ -10,9 +10,9 @@ data class Material(
     val id: Long = 0,
 
     val materialname: String,
-    val rohstoff1: Rohstoffe,
-    val rohstoff2: Rohstoffe,
-    val rohstoff3: Rohstoffe,
+    val rohstoff1: String,
+    val rohstoff2: String,
+    val rohstoff3: String,
     val giftig: Boolean,
     val materialGewicht: Double
 )

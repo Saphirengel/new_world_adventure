@@ -10,7 +10,7 @@ data class Fraktion(
     val id: Long = 0,
 
     val name: String,
-    val frieden: FraktionsListe,
-    val neutral: FraktionsListe,
-    val verfeindet: FraktionsListe
+    val frieden: String,
+    val neutral: String,
+    val verfeindet: String
 )
