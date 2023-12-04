@@ -13,5 +13,8 @@ data class Flora(
     val floraIncridience: String,
     val IncridienceValue: Int,
     val giftig: Boolean,
-    val floraGewicht: Double
+    val heilkraft: Int,
+    val manakraft: Int
+    val floraGewicht: Double,
+    val itemStufe: Int
 )

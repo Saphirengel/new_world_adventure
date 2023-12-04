@@ -14,5 +14,6 @@ data class Material(
     val rohstoff2: String,
     val rohstoff3: String,
     val giftig: Boolean,
-    val materialGewicht: Double
+    val materialGewicht: Double,
+    val itemStufe: Int
 )
