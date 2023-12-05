@@ -5,10 +5,10 @@ import com.example.newworldadventure.data.model.Rohstoffe
 object Fasern {
 
     val fasernRoh = listOf(
-        Rohstoffe(27,"Fasern","",0.2),
-        Rohstoffe(28,"Flachs","",0.2),
-        Rohstoffe(29,"Baumwolle", "", 0.6),
-        Rohstoffe(30,"Seide","",0.2),
-        Rohstoffe(31,"Wolle","",1.2)
+        Rohstoffe(27,"Dunkelmondwolle",null,1.5,2),
+        Rohstoffe(28,"Schimmernde Seide",null,1.8,3),
+        Rohstoffe(29,"Glitzerfaser",null,2.0,4),
+        Rohstoffe(30,"Sternenflaum",null,2.2,4),
+        Rohstoffe(31,"Nebelgewebe",null,2.5,5)
     )
 }

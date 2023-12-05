@@ -11,10 +11,10 @@ data class Flora(
 
     val floraName: String,
     val floraIncridience: String,
-    val IncridienceValue: Int,
+    val incridienceValue: Int,
     val giftig: Boolean,
     val heilkraft: Int,
-    val manakraft: Int
+    val manakraft: Int,
     val floraGewicht: Double,
     val itemStufe: Int
 )

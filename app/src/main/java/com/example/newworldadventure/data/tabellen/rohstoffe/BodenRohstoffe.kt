@@ -6,12 +6,12 @@ object BodenRohstoffe {
 
 
     val bodenRohstoffe = listOf(
-        Rohstoffe(1,"Kupfererz", "", 0.8),
-        Rohstoffe(2,"Zinnerz", "", 0.7),
-        Rohstoffe(3,"Kohle", "", 1.6),
-        Rohstoffe(4,"Eisenerz", "", 1.0),
-        Rohstoffe(5,"Kobalterzerz", "", 1.5),
-        Rohstoffe(6,"Sternenerz", "", 0.8),
-        Rohstoffe(7,"Titanerz", "",2.0)
+        Rohstoffe(1,"Schattenstein","Schwarz",2.0,2),
+        Rohstoffe(2,"Feuersplitter","Rot",2.5,3),
+        Rohstoffe(3,"Nebelstein","Lila",2.2,3),
+        Rohstoffe(4,"Eiskristall","Blau",3.0,4),
+        Rohstoffe(5,"Mondsilber","Silber",2.8,4),
+        Rohstoffe(6,"Sonnenmetall","Gold",3.5,5),
+        Rohstoffe(7,"Kristallith","Kristallklar",4.0,6)
     )
 }

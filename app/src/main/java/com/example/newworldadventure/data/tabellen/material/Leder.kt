@@ -4,18 +4,12 @@ import com.example.newworldadventure.data.model.Material
 
 object Leder {
 
-    val leder = listOf<Material>(
-        Material(91, "Zephyrleder", "Fell", "Fell", "", false, 12.0),
-        Material(92, "Drachenleder", "Fell", "Fell", "Fell", false, 20.0),
-        Material(93, "Schattenfellen", "Fell", "", "", false, 18.0),
-        Material(94, "Phönixhaut", "Fell", "Fell", "Fell", false, 22.0),
-        Material(95, "Eiswolfpelz", "Fell", "", "", false, 15.0),
-        Material(96, "Einhornhaut", "Fell", "Fell", "", false, 25.0),
-        Material(97, "Koboldleder", "Fell", "Fell", "", false, 16.0),
-        Material(98, "Sirenenhaut", "Fell", "Fell", "", false, 21.0),
-        Material(99, "Dämonenleder", "Fell", "Fell", "Fell", false, 28.0),
-        Material(100, "Zentaurenleder", "Fell", "Fell", "", false, 23.0),
-        Material(101, "Elfenleder", "Fell", "Fell", "", false, 19.0),
-        Material(102, "Nagawappen", "Fell", "Fell", "", false, 26.0)
+    val leder = listOf(
+        Material(39,"Phönixleder","Phönixfeder","","",false,2.8,2),
+        Material(40,"Eiswolfleder","Eiswolfpelz","","",false,2.8,3),
+        Material(41,"Schuppiges Drachenlederleder","Schuppiger Drachenhaut","","",false,2.8,4),
+        Material(42,"Mondlöwenleder","Mondlöwenfell","","",false,2.8,4),
+        Material(43,"Schattentigerleder","Schattentigerfell","","",false,2.8,5),
+        Material(44,"Sternbärenlederleder","Sternenbärenfell","","",false,2.8,6),
     )
 }

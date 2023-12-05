@@ -10,7 +10,7 @@ data class Rohstoffe(
     val id: Long = 0,
 
     val rohstoffName: String,
-    val edelsteinfarbe: String?,
+    val farbe: String?,
     val rohstoffGewicht: Double,
     val itemStufe: Int
 )
