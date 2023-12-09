@@ -25,8 +25,8 @@ data class Schmuck(
     val materialZahl2: Int?,
     val materialName3: String?,
     val materialZahl3: Int?,
-    val schmuckGewicht: Double,
-    val stufeDesSchmucks: Int
+    val gewicht: Double,
+    val itemStufe: Int
 )
 
 

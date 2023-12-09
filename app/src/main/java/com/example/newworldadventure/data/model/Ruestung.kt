@@ -29,6 +29,6 @@ data class Ruestung(
     val blockwert: Int?,
     val minHaltbarkeit: Int,
     val maxHaltbarkeit: Double,
-    val ruestungsGewicht: Int,
-    val stufeDerRuestung: Int
+    val gewicht: Int,
+    val itemStufe: Int
 )

@@ -11,6 +11,6 @@ data class Rohstoffe(
 
     val rohstoffName: String,
     val farbe: String?,
-    val rohstoffGewicht: Double,
+    val gewicht: Double,
     val itemStufe: Int
 )

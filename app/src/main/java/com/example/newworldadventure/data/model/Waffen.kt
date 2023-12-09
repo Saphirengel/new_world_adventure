@@ -28,6 +28,6 @@ data class Waffen(
     val schaden: Int,
     val minHaltbarkeit: Int,
     val maxHaltbarkeit: Int,
-    val waffenGewicht: Double,
-    val stufeDerWaffe: Int
+    val gewicht: Double,
+    val itemStufe: Int
 )

@@ -15,6 +15,6 @@ data class Flora(
     val giftig: Boolean,
     val heilkraft: Int,
     val manakraft: Int,
-    val floraGewicht: Double,
+    val gewicht: Double,
     val itemStufe: Int
 )
