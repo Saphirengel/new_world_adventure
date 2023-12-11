@@ -6,14 +6,17 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.example.newworldadventure.R
+import com.example.newworldadventure.data.GameRepository
+import com.example.newworldadventure.data.local.GameDatabase
 import com.example.newworldadventure.databinding.KompendiumScreenFloraFaunaBinding
 import com.example.newworldadventure.databinding.KompendiumScreenMaterialienBinding
 import com.example.newworldadventure.databinding.KompendiumScreenWaffenRuestungSchmuckBinding
 
 class KompendiumAdapter(
-    private val dataset: ,
+    private val dataset: List<Any>,
+    private val repository: GameRepository,
     private val context: Context
-) : RecyclerView.Adapter<ViewHolder(){
+) : RecyclerView.Adapter<ViewHolder>(){
 
     private  val floraUndFauna = 1
     private val material = 2
@@ -36,10 +39,10 @@ class KompendiumAdapter(
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        return if(viewType ==){
+        return if(viewType == floraUndFauna){
             val binding = KompendiumScreenFloraFaunaBinding.inflate(LayoutInflater.from(parent.context),parent,false)
             floraUndFaunaViewHolder(binding)
-        } else if (viewType ==){
+        } else if (viewType == material){
             val binding = KompendiumScreenMaterialienBinding.inflate(LayoutInflater.from(parent.context),parent,false)
             materialViewHolder(binding)
         }else {
@@ -60,7 +63,7 @@ class KompendiumAdapter(
             holder.binding.tvNameFloraFauna.text
             holder.binding.tvArtFloraFauna.text
             holder.binding.ivGiftNogift.setImageResource(
-                if(){
+                if(repository.flora.){
                     ivGiftNogift.setImageResource(R.drawable.skull_giftig)
                 }else if(){
                     ivGiftNogift.setImageResource(R.drawable.skull_ungiftig)
