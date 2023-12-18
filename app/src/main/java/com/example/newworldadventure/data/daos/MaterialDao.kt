@@ -1,6 +1,7 @@
 package com.example.newworldadventure.data.daos
 
 import androidx.lifecycle.LiveData
+import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
@@ -8,7 +9,7 @@ import androidx.room.Update
 import com.example.newworldadventure.data.model.Flora
 import com.example.newworldadventure.data.model.Material
 import com.example.newworldadventure.data.model.Rohstoffe
-
+@Dao
 interface MaterialDao {
 
 
@@ -31,7 +32,7 @@ interface MaterialDao {
 
 
     @Query("SELECT*FROM materialen_table WHERE id = :materialId")
-    fun selectByMaterialId(materialId: Long): Rohstoffe
+    fun selectByMaterialId(materialId: Long): Material
 
 
     @Query("SELECT COUNT(id) FROM materialen_table")

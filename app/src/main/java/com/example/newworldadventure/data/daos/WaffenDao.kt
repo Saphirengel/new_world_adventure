@@ -1,13 +1,14 @@
 package com.example.newworldadventure.data.daos
 
 import androidx.lifecycle.LiveData
+import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import androidx.room.Update
 import com.example.newworldadventure.data.model.Rohstoffe
 import com.example.newworldadventure.data.model.Waffen
-
+@Dao
 interface WaffenDao {
 
     //Hier sind alle DAOs für die Waffen
@@ -29,7 +30,7 @@ interface WaffenDao {
 
 
     @Query("SELECT*FROM waffen_table WHERE id = :waffenId")
-    fun selectByWaffenId(waffenId: Long): Rohstoffe
+    fun selectByWaffenId(waffenId: Long): Waffen
 
 
     @Query("SELECT COUNT(id) FROM waffen_table")

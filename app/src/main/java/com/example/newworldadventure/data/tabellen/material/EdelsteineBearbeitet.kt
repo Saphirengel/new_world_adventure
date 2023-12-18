@@ -2,7 +2,7 @@ package com.example.newworldadventure.data.tabellen.material
 
 import com.example.newworldadventure.data.model.Edelsteine
 
-class EdelsteineBearbeitet {
+ object EdelsteineBearbeitet {
 
     val edelsteineBearbeitet = listOf(
 

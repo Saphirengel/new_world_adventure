@@ -6,14 +6,15 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.newworldadventure.data.GameRepository
 import com.example.newworldadventure.data.local.getDatabase
+import com.example.newworldadventure.data.remote.RassenApi
 import kotlinx.coroutines.launch
 
-class GameViewModel(
+class DatenViewModel(
     application: Application
 ): AndroidViewModel(application) {
 
     private val database = getDatabase(application)
-    private val repository = GameRepository(database)
+    private val repository = GameRepository(database, RassenApi)
 
     val flora = repository.flora
     val fraktionen = repository.fraktion
@@ -52,4 +53,6 @@ class GameViewModel(
             repository.getWaffen()
         }
     }
+
 }
+

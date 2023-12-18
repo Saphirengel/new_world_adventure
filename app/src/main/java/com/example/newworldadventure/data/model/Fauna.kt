@@ -15,6 +15,6 @@ data class Fauna(
     val staticLoot2: String,
     val loot2: Int,
     val randomLoot: List<String>,
-    val passivität: Boolean,
+    val passivitaet: Boolean,
     val art: String
 )

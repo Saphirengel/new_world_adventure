@@ -8,10 +8,14 @@ import com.example.newworldadventure.data.model.Flora
 import com.example.newworldadventure.data.model.Fraktion
 import com.example.newworldadventure.data.model.Material
 import com.example.newworldadventure.data.model.Rohstoffe
+import com.example.newworldadventure.data.model.Unterrasse
 import com.example.newworldadventure.data.model.Waffen
+import com.example.newworldadventure.data.remote.RassenApi
 
 class GameRepository(
-    private val database: GameDatabase) {
+    private val database: GameDatabase,
+    private val api: RassenApi
+) {
 
     //-----------------------------------LiveData---------------------------------------------------
 
@@ -34,6 +38,10 @@ class GameRepository(
     private val _waffen = MutableLiveData<List<Waffen>>()
     val waffen : LiveData<List<Waffen>>
         get() = _waffen
+
+    private var _rassenWerter = MutableLiveData<List<Unterrasse>>()
+    val rassenWerter: LiveData<List<Unterrasse>>
+        get() = _rassenWerter
 
     //-----------------------------------alle Dao Insert--------------------------------------------
     suspend fun insertFlora(flora: Flora){
@@ -118,6 +126,11 @@ class GameRepository(
         }catch (e: Exception){
             Log.e("Repostory","$e")
         }
+    }
+
+    suspend fun getRassen(){
+        val result = api.retrofitService.getUnterrasse()
+        _rassenWerter.postValue(result)
     }
 
 

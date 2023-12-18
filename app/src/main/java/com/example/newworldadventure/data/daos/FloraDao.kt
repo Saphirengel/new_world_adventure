@@ -30,7 +30,7 @@ interface FloraDao {
 
 
     @Query("SELECT*FROM flora_table WHERE id = :floraId")
-    fun selectByFloraId(floraId: Long): Rohstoffe
+    fun selectByFloraId(floraId: Long): Flora
 
 
     @Query("SELECT COUNT(id) FROM flora_table")

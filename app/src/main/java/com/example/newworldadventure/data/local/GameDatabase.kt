@@ -25,7 +25,6 @@ import com.example.newworldadventure.data.model.Werte
     Elementarten::class,
     Fauna::class,
     Flora::class,
-    Fauna::class,
     Material::class,
     Rassen::class,
     Rohstoffe::class,
